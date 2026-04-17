@@ -9,9 +9,9 @@
 
 	// db 에 저장
 	DBHandler db = new DBHandler();
-	db.listUser();
+	db.fixUser(userid, username, email);
 	
 	// page 돌아가기
-	//response.sendRedirect("http://localhost:8080/PrJjsp02/index.html");
+	response.sendRedirect("http://localhost:8080/PrJjsp02/index.html");
 %>
 	

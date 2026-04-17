@@ -2,6 +2,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
+// http://localhost:8080/PrJjsp02/adduser.jsp
+// ?userid=sky10
+// &username=%EC%8A%A4%EC%B9%B4%EC%9D%B410 
+// &email=sky10%40green.com
 	request.setCharacterEncoding("utf-8");
 	String userid = request.getParameter("userid");
 	String username = request.getParameter("username");
@@ -9,9 +13,9 @@
 
 	// db 에 저장
 	DBHandler db = new DBHandler();
-	db.listUser();
+	db.addUser(userid, username, email);
 	
 	// page 돌아가기
-	//response.sendRedirect("http://localhost:8080/PrJjsp02/index.html");
+	response.sendRedirect("http://localhost:8080/PrJjsp02/index.html");
 %>
 	
